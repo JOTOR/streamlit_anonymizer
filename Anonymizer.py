@@ -21,7 +21,7 @@ def anonymise_categorical_variable(DATAFRAME, COLS):
 
 st.header("The Anonymizer")
 st.markdown("Replace any sensitive **categorical** feature in a dataset, for example, if you have the countries AUS, COL, ARG these are replaced by Country_1, Country_2, Country 3")
-
+st.markdown("Developed by: **Jhonnatan Torres**")
 data = st.file_uploader("Upload a csv file", type=["csv"])
 
 if data is not None:
