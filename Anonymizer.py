@@ -20,7 +20,7 @@ def anonymise_categorical_variable(DATAFRAME, COLS):
         #pd.rename({col:col+'_'+'Anonym'}, axis=1, inplace=True)
 
     st.write("Output Dataset:")
-    st.dataframe(df.drop(columns=DIFF))
+    #st.dataframe(df.drop(columns=DIFF))
 
 st.header("The Anonymizer")
 st.markdown("Replace any sensitive **categorical** feature in a dataset, for example, if you have the countries AUS, COL, ARG these are replaced by Country_1, Country_2, Country 3")
