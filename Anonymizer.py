@@ -29,7 +29,7 @@ data = st.file_uploader("Upload a csv file", type=["csv"])
 if data is not None:
     df = pd.read_csv(data)
     CAT_COLS = df.select_dtypes(include=['object']).columns.tolist()
-    TO_REMOVE = st.multiselect("Columns to remove from process:", df.columns)     
+    TO_REMOVE = st.multiselect("Columns to be removed from process:", df.columns)     
     DIFF = list(set(CAT_COLS)-set(TO_REMOVE))
     st.write("Columns included in the process: ",str(DIFF))
     st.write("Input Dataset:")
