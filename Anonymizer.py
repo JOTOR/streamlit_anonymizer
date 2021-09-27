@@ -16,7 +16,8 @@ def anonymise_categorical_variable(DATAFRAME, COLS):
             res_dict.update({k:v})        
         
         #DATAFRAME[col+'_'+'Anonym'] = DATAFRAME[col].map(res_dict)
-        DATAFRAME[col] = DATAFRAME[col].map(res_dict)
+        res = DATAFRAME[col].map(res_dict)
+        DATAFRAME[col] = res
         #pd.rename({col:col+'_'+'Anonym'}, axis=1, inplace=True)
 
     st.write("Output Dataset:")
